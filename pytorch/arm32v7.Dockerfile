@@ -6,9 +6,9 @@ ENV NO_DISTRIBUTED=1
 
 RUN apt-get update && apt-get install -y \
   build-essential \
-  bzip2 \
+  #bzip2 \
   cmake \
-  curl \
+  #curl \
   cython \
   g++ \
   git \
@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
   libatlas-dev \
   libblas-dev \
   libopenblas-dev \
-  m4 \
+  #m4 \
   make \
   python3 \
   python3-dev \
@@ -25,8 +25,9 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN git clone --recursive https://github.com/pytorch/pytorch /pytorch \
-  && cp /pytorch \
+  && cd /pytorch \
   && python3 -m pip install numpy typing \
   && python3 setup.py build \
-  && python3 setup.py install
+  && python3 setup.py install \
+  && cd / && rm -rf /pytorch
 
