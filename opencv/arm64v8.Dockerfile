@@ -1,8 +1,5 @@
-FROM multiarch/debian-debootstrap:arm64-stretch-slim
+FROM arm64v8/python:3.6-jessie
 MAINTAINER Jeremie Drouet <jeremie@inyoursaas.io>
-
-ENV NO_CUDA=1
-ENV NO_DISTRIBUTED=1
 
 COPY install.sh /install.sh
 

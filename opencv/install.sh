@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install -y cmake wget python3-pip
+apt-get install -y cmake wget
 
 pip3 install numpy
 
