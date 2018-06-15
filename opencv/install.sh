@@ -11,6 +11,9 @@ wget -O /opencv-contrib.tar.gz https://github.com/opencv/opencv_contrib/archive/
 tar xf opencv.tar.gz
 tar xf opencv-contrib.tar.gz
 
+rm opencv.tar.gz
+rm opencv-contrib.tar.gz
+
 mv opencv-3.4.1-cvsdk opencv
 mv opencv_contrib-3.4.1 opencv-contrib
 
@@ -20,14 +23,23 @@ cd /opencv/build
 cmake \
   -D CMAKE_BUILD_TYPE=RELEASE \
   -D CMAKE_INSTALL_PREFIX=/usr/local \
-  -D INSTALL_PYTHON_EXAMPLES=ON \
   -D OPENCV_EXTRA_MODULES_PATH=/opencv-contrib/modules \
-  -D BUILD_EXAMPLES=ON \
+  -D BUILD_EXAMPLES=OFF \
+  -D BUILD_opencv_apps=OFF \
+  -D BUILD_DOCS=OFF \
+  -D BUILD_PERF_TESTS=OFF \
+  -D BUILD_TESTS=OFF \
+  -D INSTALL_PYTHON_EXAMPLES=OFF \
   ..
 
 make
 make install
 
+cd /
+
+rm -rf /opencv /opencv-contrib
+
+apt-get remove -y wget cmake
 apt-get clean
 
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
