@@ -3,8 +3,6 @@
 apt-get update
 apt-get install -y cmake wget
 
-pip3 install numpy
-
 wget -O /opencv.tar.gz https://github.com/opencv/opencv/archive/3.4.1-cvsdk.tar.gz
 wget -O /opencv-contrib.tar.gz https://github.com/opencv/opencv_contrib/archive/3.4.1.tar.gz
 

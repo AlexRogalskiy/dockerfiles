@@ -1,4 +1,4 @@
-FROM arm64v8/python:3.6-jessie
+FROM inyoursaas/python3-numpy:arm64v8
 MAINTAINER Jeremie Drouet <jeremie@inyoursaas.io>
 
 COPY install.sh /install.sh
