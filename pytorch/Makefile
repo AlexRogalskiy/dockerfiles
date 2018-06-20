@@ -1,5 +1,7 @@
 all: build test push
 
+arm32v7: build-arm32v7 test-arm32v7 push-arm32v7
+
 build: build-arm64v8 build-arm32v7
 
 build-arm64v8:
