@@ -1,4 +1,4 @@
-FROM multiarch/debian-debootstrap:arm64-stretch-slim
+FROM inyoursaas/python3-numpy:arm64v8
 MAINTAINER Jeremie Drouet <jeremie@inyoursaas.io>
 
 ENV NO_CUDA=1

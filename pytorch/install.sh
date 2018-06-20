@@ -13,12 +13,10 @@ apt-get install -y \
   libblas-dev \
   libopenblas-dev \
   make \
-  python3 \
   python3-dev \
-  python3-pip \
   python3-yaml
 
-python3 -m pip install numpy typing
+python3 -m pip install typing
 
 git clone --recursive https://github.com/pytorch/pytorch /pytorch
 

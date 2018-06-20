@@ -1,4 +1,4 @@
-FROM multiarch/debian-debootstrap:armhf-stretch-slim
+FROM inyoursaas/python3-numpy:arm32v7
 MAINTAINER Jeremie Drouet <jeremie@inyoursaas.io>
 
 ENV NO_CUDA=1
