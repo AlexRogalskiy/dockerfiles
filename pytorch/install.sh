@@ -13,10 +13,9 @@ apt-get install -y \
   libblas-dev \
   libopenblas-dev \
   make \
-  python3-dev \
-  python3-yaml
+  python3-dev
 
-python3 -m pip install typing
+python3 -m pip install typing pyyaml
 
 git clone --recursive https://github.com/pytorch/pytorch /pytorch
 
@@ -31,6 +30,7 @@ apt-get remove -y \
   build-essential \
   g++ \
   git \
+  cmake \
   make \
   python3-dev
 
