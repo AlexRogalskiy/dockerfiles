@@ -1,4 +1,6 @@
-FROM inyoursaas/python3-numpy:arm32v7
+ARG IMAGE_ARCH=amd64
+
+FROM inyoursaas/python3-numpy:${IMAGE_ARCH}
 MAINTAINER Jeremie Drouet <jeremie@inyoursaas.io>
 
 COPY install.sh /install.sh
